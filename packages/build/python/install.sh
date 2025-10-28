@@ -55,15 +55,17 @@ which python
 python --version
 
 export UV_DEFAULT_INDEX="${PIP_INDEX_URL}"
+uv config set pip.index-url https://pypi.tuna.tsinghua.edu.cn/simple
+
 # Upgrade pip and base utilities
-uv pip install --upgrade --index-url "${PIP_INDEX_URL}" pip pkginfo
+uv pip install -v --upgrade --index-url "${PIP_INDEX_URL}" pip pkginfo
 
 which pip || true
 pip --version || true
 
 # Install core dependencies
-uv pip install --no-binary :all: psutil
-uv pip install --upgrade --index-url "${PIP_INDEX_URL}" \
+uv pip install -v --no-binary :all: psutil
+uv pip install -v --upgrade --index-url "${PIP_INDEX_URL}" \
   setuptools \
   packaging \
   Cython \
