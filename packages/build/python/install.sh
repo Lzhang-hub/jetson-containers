@@ -63,7 +63,7 @@ pip --version || true
 
 # Install core dependencies
 uv pip install --no-binary :all: psutil
-uv pip install --upgrade \
+uv pip install --upgrade --index-url "${PIP_INDEX_URL}" \
   setuptools \
   packaging \
   Cython \
