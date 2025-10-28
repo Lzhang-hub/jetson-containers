@@ -33,6 +33,9 @@ ENV PYTHON_VERSION=${PYTHON_VERSION} \
 
 # COPY install.sh $TMP/
 ADD . $TMP/
+ENV UV_INDEX=https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple
+ENV UV_EXTRA_INDEX_URL=https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple
+
 RUN $TMP/install.sh
 
 # Set PYTHON_GIL=0 for free-threaded builds
