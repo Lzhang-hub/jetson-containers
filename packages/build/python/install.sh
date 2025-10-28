@@ -54,13 +54,13 @@ uv venv --python "${PY_BIN}" --system-site-packages /opt/venv
 which python
 python --version
 
-export UV_DEFAULT_INDEX="${PIP_INDEX_URL}"
+# export UV_DEFAULT_INDEX="${PIP_INDEX_URL}"
 
-mkdir -p ~/.config/uv && cat > ~/.config/uv/uv.toml <<'EOF'
-[[index]]
-url = "https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple"
-default = true
-EOF
+# mkdir -p ~/.config/uv && cat > ~/.config/uv/uv.toml <<'EOF'
+# [[index]]
+# url = "https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple"
+# default = true
+# EOF
 
 # Upgrade pip and base utilities
 uv pip install -v --upgrade --index-url "${PIP_INDEX_URL}" pip pkginfo
