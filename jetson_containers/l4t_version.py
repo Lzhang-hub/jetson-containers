@@ -354,9 +354,9 @@ def get_l4t_base(l4t_version: str = None):
         l4t_version = get_l4t_version()
 
     if l4t_version.major >= 38:  # JetPack 7
-        return f"ubuntu:{LSB_RELEASE}"
+        return f"docker.1ms.run/ubuntu:{LSB_RELEASE}"
     elif l4t_version.major >= 36:  # JetPack 6
-        return f"ubuntu:{LSB_RELEASE}"
+        return f"docker.1ms.run/ubuntu:{LSB_RELEASE}"
     elif l4t_version.major >= 34:  # JetPack 5
         if l4t_version >= Version('35.4.1'):
             return "nvcr.io/nvidia/l4t-jetpack:r35.4.1"
