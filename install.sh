@@ -25,7 +25,7 @@ fi
 pip3 --version || sudo apt-get install -y python3-pip
 
 pip3 config set global.index-url https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple
-git config url."https://githubfast/".insteadOf https://github.com/
+# git config url."https://githubfast/".insteadOf https://github.com/
 
 # install package requirements
 pip3 install -r "$ROOT/requirements.txt"
