@@ -28,7 +28,7 @@ APP_VERSION="0.9.5"
 if [ -n "${UV_INSTALLER_GHE_BASE_URL:-}" ]; then
     INSTALLER_BASE_URL="$UV_INSTALLER_GHE_BASE_URL"
 else
-    INSTALLER_BASE_URL="${UV_INSTALLER_GITHUB_BASE_URL:-https://githubfast.com}"
+    INSTALLER_BASE_URL="${UV_INSTALLER_GITHUB_BASE_URL:-https://gh.llkk.cc/https://github.com}"
 fi
 if [ -n "${UV_DOWNLOAD_URL:-}" ]; then
     ARTIFACT_DOWNLOAD_URL="$UV_DOWNLOAD_URL"
@@ -437,6 +437,7 @@ download_binary_and_run_installer() {
     _dir="$(ensure mktemp -d)" || return 1
     local _file="$_dir/input$_zip_ext"
 
+    say "uv url : $_url" 1>&2
     say "downloading $APP_NAME $APP_VERSION ${_arch}" 1>&2
     say_verbose "  from $_url" 1>&2
     say_verbose "  to $_file" 1>&2
