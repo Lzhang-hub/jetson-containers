@@ -29,7 +29,7 @@ apt-get install -y --no-install-recommends \
 
 # Install uv (default location: ~/.local/bin/uv)
 # curl -fsSL https://astral.sh/uv/install.sh | sh
-sh uv_install.sh
+sh /tmp/python/uv_install.sh
 
 # Ensure uv is in PATH (move binary to /usr/local/bin for non-login environments)
 if [ -f "${HOME}/.local/bin/uv" ]; then
