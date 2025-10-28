@@ -37,6 +37,7 @@ if [ -f "${HOME}/.local/bin/uv" ]; then
 fi
 
 # Install the requested Python version via uv
+export UV_PYTHON_MIRROR="https://mirrors.tuna.tsinghua.edu.cn/python"
 uv python install "${PYTHON_INSTALL_VERSION}"
 
 # Find the path to that Python version
