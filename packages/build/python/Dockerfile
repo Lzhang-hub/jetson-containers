@@ -42,3 +42,6 @@ RUN $TMP/install.sh
 RUN if [ "${PYTHON_FREE_THREADING}" = "1" ]; then \
       echo "export PYTHON_GIL=0" >> /etc/bash.bashrc; \
     fi
+    
+ENV UV_INDEX=https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple
+ENV UV_EXTRA_INDEX_URL=https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple
