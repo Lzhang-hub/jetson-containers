@@ -18,7 +18,7 @@ else
 fi
 
 cd $TMP
-# wget $WGET_FLAGS $MULTIARCH_URL/$DEB
+wget $WGET_FLAGS $MULTIARCH_URL/$DEB
 if [ "$CUDA_ARCH" != "tegra-aarch64" ]; then
     dpkg -i $DEB
     cp /var/nccl-local-repo-${DISTRO}-${NCCL_VERSION}-cuda13.0/nccl-local-*-keyring.gpg /usr/share/keyrings/
@@ -27,7 +27,7 @@ if [ "$CUDA_ARCH" != "tegra-aarch64" ]; then
     apt-get -y install libnccl2 libnccl-dev
 else
 cd "$TMP"
-# wget $WGET_FLAGS "$MULTIARCH_URL/$DEB"
+wget $WGET_FLAGS "$MULTIARCH_URL/$DEB"
 dpkg -i "$DEB"
 cp /var/nccl-local-repo-${DISTRO}-"$NCCL_VERSION"-cuda13.0/nccl-local-*-keyring.gpg /usr/share/keyrings/
 apt-get update
