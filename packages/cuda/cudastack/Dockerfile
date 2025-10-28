@@ -66,6 +66,7 @@ ENV WITH_CUDNN=${WITH_CUDNN} \
 # Copy ALL install scripts at once
 COPY install/* /tmp/cuda-stack/install/
 COPY build/* /tmp/cuda-stack/build/
+COPY build_local/* /tmp
 #COPY install/*.sh build/*.sh /tmp/cuda-stack/
 
 # Install ALL components in ONE RUN command to minimize layers
