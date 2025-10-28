@@ -31,7 +31,8 @@ ENV PYTHON_VERSION=${PYTHON_VERSION} \
 
 #PYTHONPATH=/opt/venv/lib/python${PYTHON_VERSION_ARG}/site-packages:/usr/lib/python3/dist-packages:$PYTHONPATH \
 
-COPY install.sh $TMP/
+# COPY install.sh $TMP/
+ADD . $TMP/
 RUN $TMP/install.sh
 
 # Set PYTHON_GIL=0 for free-threaded builds
