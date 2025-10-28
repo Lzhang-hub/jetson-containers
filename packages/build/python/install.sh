@@ -57,7 +57,7 @@ python --version
 export UV_DEFAULT_INDEX="${PIP_INDEX_URL}"
 
 mkdir -p ~/.config/uv && cat > ~/.config/uv/uv.toml <<'EOF'
-[[tool.uv.index]]
+[[index]]
 url = "https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple"
 default = true
 EOF
