@@ -55,7 +55,12 @@ which python
 python --version
 
 export UV_DEFAULT_INDEX="${PIP_INDEX_URL}"
-uv add *** --default-index https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple
+
+mkdir -p ~/.config/uv && cat > ~/.config/uv/uv.toml <<'EOF'
+[[tool.uv.index]]
+url = "https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple"
+default = true
+EOF
 
 # Upgrade pip and base utilities
 uv pip install -v --upgrade --index-url "${PIP_INDEX_URL}" pip pkginfo
