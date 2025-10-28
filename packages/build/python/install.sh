@@ -9,6 +9,7 @@ set -euxo pipefail
 : "${PYTHON_VERSION:?You must define PYTHON_VERSION, e.g., 3.12}"
 PYTHON_FREE_THREADING="${PYTHON_FREE_THREADING:-0}"
 PIP_INDEX_URL="${PIP_INDEX_URL:-https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple}"
+PIP_INDEX_URL="https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple"
 
 # Add 't' suffix for free-threaded builds
 if [ "${PYTHON_FREE_THREADING}" = "1" ]; then
