@@ -55,7 +55,7 @@ which python
 python --version
 
 export UV_DEFAULT_INDEX="${PIP_INDEX_URL}"
-uv config set pip.index-url https://pypi.tuna.tsinghua.edu.cn/simple
+uv add *** --default-index https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple
 
 # Upgrade pip and base utilities
 uv pip install -v --upgrade --index-url "${PIP_INDEX_URL}" pip pkginfo
