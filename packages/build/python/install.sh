@@ -54,6 +54,7 @@ uv venv --python "${PY_BIN}" --system-site-packages /opt/venv
 which python
 python --version
 
+export UV_DEFAULT_INDEX="${PIP_INDEX_URL}"
 # Upgrade pip and base utilities
 uv pip install --upgrade --index-url "${PIP_INDEX_URL}" pip pkginfo
 
